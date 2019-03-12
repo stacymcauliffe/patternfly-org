@@ -10,80 +10,100 @@ Most forms will contain the following basic elements:
 *Form elements*
 ![Form elements](img/form-elements.png)
 
-1. [Labels](/design-guidelines/usage-and-behavior/data-input) - Field labels can be aligned to the left or top of the field depending on the layout of your page and the amount of space you have to work with. Learn more about field labels in the [text and data input design guidelines](/design-guidelines/usage-and-behavior/data-input).
-
-  *Aligned to the top*
+1. [Labels](#labeling) - Field labels can be aligned to the left or top of the field depending on the layout of your page and the amount of space you have to work with.
 
   ![Aligned to the top](img/top-aligned.png)
 
-  *Aligned to the left*
-
   ![Aligned to the left](img/left-aligned.png)
 
-2. [Text field](/design-guidelines/usage-and-behavior/data-input) - provides an area for users to input free-form text.
+2. [Text input/text area](/design-guidelines/usage-and-behavior/data-input) - provides an area for users to input free-form text.
 
-3. [Data input](/design-guidelines/usage-and-behavior/data-input) - provides a way for users to submit any information that is not free-form text. For example, you might use a check box to enable users to select from multiple predetermined values or a radio button to enable users to select one value from a list of several values. Input components are designed for specific use cases. Learn more about data input variations in the [text and data input design guidelines](/design-guidelines/usage-and-behavior/data-input).
+3. [Data input](#choose-the-right-data-input) - provides a way for users to submit any information that is not free-form text.
 
-4. [Help](#Provide-the-right-kind-of-help) - provides assistance in any area where the user might need additional information or context to provide the right input
-    * Infotip - provides content in a popover or tooltip.
-    * Input help - provides help inside of or directly below a field.
-        * Placeholder text
-        * Helper text
+4. [Help](#provide-the-right-kind-of-help) - provides contextual assistance like infotips, placeholder text, or helpter text, in any area where the user might need additional information to provide the right input.
 
-5. [Errors and validation](#Provide-errors-and-validation) - ensures that the correct information is collected before the form can be submitted to the system.
+5. [Errors and validation](#provide-errors-and-validation) - ensures that the correct information is collected before the form can be submitted to the system.
 
 6. Action buttons - enables a user to submit or exit a form. Button placement depends on the type of form you're presenting to the user.
 
   When using forms in a modal, align buttons to the right edge of the input field. Place the primary button on the far right and the secondary button to the left.
 
-  *Buttons on a modal*
-
   ![Buttons on a modal](img/modal-button.png)
 
   When using full page forms, align buttons to the left, placing the primary button on the left and secondary on the right.
 
-  *Buttons on a full page form*
-
   ![Buttons on a full page](img/fullpage-button.png)
 
-  7. Required field indicator
+  7. [Required field indicator](#indicating-required-fields)
 
-## Components and demos used
-The PatternFly components listed can be used in a number of ways to build forms to suit specific needs or use-cases.
+## Designing forms
+### Labeling
+Always provide labels for text and data input so users understand what information is being requested of them. Labels can be aligned to the top or left of an input.
 
-**HTML/CSS components**
-* [Form](/documentation/core/components/form)
-* [Button](/documentation/core/components/button)
-* [Check](/documentation/core/components/check)
-* [Content](/documentation/core/components/content)
-* [Dropdown](/documentation/core/components/dropdown)
-* [Formcontrol](/documentation/core/components/formcontrol)
-* [Inputgroup](/documentation/core/components/inputgroup)
-* [Popover](/documentation/core/components/popover)
-* [Progress](/documentation/core/components/progress)
-* [Switch](/documentation/core/components/switch)
-* [Tooltip](/documentation/core/components/tooltip)
+* Use left-aligned labels as your default choice. This approach has been shown to lead to the shortest completion times.
+* Use top-aligned labels when you are space constrained or if mobile usage is a high priority.
+* Whichever approach you use, we recommend that you maintain consistency throughout an application.
 
-**React components**
-* [Form](/documentation/react/components/form)
-* [Button](/documentation/react/components/button)
-* [Checkbox](documentation/react/components/checkbox)
-* [Dropdown](/documentation/react/components/dropdown)
-* [Progress](/documentation/react/components/progress)
-* [Radio](/documentation/react/components/radio)
-* [Select](/documentation/react/components/select)
-* [Switch](/documentation/react/components/switch)
-* [TextArea](/documentation/react/components/textarea)
-* [Text](/documentation/react/components/text)
-* [Popover](/documentation/react/components/popover)
-* [TextInput](/documentation/react/components/textinput)
-* [Tooltip](/documentation/react/components/tooltip)
+**General guidelines**
+* Always provide a label for input components.
+* Labels should clearly state the required input.
+* Do not use a colon after the label name.
 
-## Usage
+**Top-Aligned Labels**
+Top-aligned labels provide a consistent left edge and close proximity between label and input. Top-aligned labels also offer the most horizontal area for long labels.
+
+When to use:
+* The ability to complete the form quickly is a high priority.
+* Label length might be long or vary, e.g. internationalization.
+* The user will be entering familiar content and is less likely to make data entry errors.
+* Only a few form fields need to be presented.
+* Related fields must be grouped horizontally, e.g. [first name] [last name].
+
+**Left-Aligned Labels**
+The strong vertical edge helps users to scan for context, although the distance between label and input might slow users down.
+
+Left-aligned labels are good for unfamiliar content or forms in which well-considered responses are necessary. They support left to right reading between label and field and are good for layouts with more horizontal space than vertical.
+
+When to use:
+* The user is presented with unfamiliar content and would benefit from scanning the form to understand the overall context.
+* It’s more important that the user pay close attention to the form material, rather than completing it quickly.
+
+To accommodate mobile viewports, left-aligned labels should be responsive by adjusting to a top-aligned layout.
+
+**Labeling for checkboxes and radio buttons**
+Checkboxes and radio buttons have a different labeling convention, where the labels should be aligned to the right of the input control.
+
+### Indicating required fields
+A required field should be indicated with an asterisk ( * ) to the right of the field label.
+
+![Required field image](img/required-field.png)
+
+When all fields on a form are required, include a message at the top of the form that indicates whether all fields are required or optional.
+
+![All required](img/all-required.png)
+
 ### Provide the right data input
 PatternFly provides a variety of input components that enable a user to make a selection. Each component was created to serve a specific use case.
 
-Learn more about data input in the [text and data input design guidelines](/design-guidelines/usage-and-behavior/data-input).
+**Checkboxes**
+Use checkboxes to enable users to select any number of items from a list. The user could select all of the available options, some of them, or none.
+
+You can also present users with a single checkbox to enable or disable an option or setting.
+
+If you have more than 5 options to present to the user, use a select list.
+
+**Radio buttons**
+Use radio buttons to enable users to choose from a list of two or more mutually exclusive options. Users can only select one option. Selecting a different radio button will automatically de-select the previously selected option.
+
+If you have more than 5 options to present to the user, use a select list.
+
+**Switch**
+Use a switch to toggle between two different states.
+
+**Select lists**
+Use a select list to enable users to select one option from a list of options. Select lists can be configured to enable users to select one option or multiple options depending on the use case.
+
+Learn more about data input variations in the [text and data input design guidelines](/design-guidelines/usage-and-behavior/data-input).
 
 ### Provide the right kind of help
 **Infotips**
@@ -93,14 +113,7 @@ Use an infotip to provide context around a text or input field. Infotips are rep
 * Use a **popover** for longer (2 sentences or more) explanations, content that requires formatting like numbered or bulleted lists, or content that requires you to include buttons, links, or images.
 * Popovers or tooltips should be displayed to the top of the icon.
 
-
-*Infotip example - top aligned labels*
-
 ![Infotips](img/infotip.png)
-
-*Infotip example - left aligned labels*
-
-![Infotips](img/infotip-left.png)
 
 **DO**
 * Use infotips for any field that may require additional background or explanation.
@@ -113,7 +126,6 @@ Use an infotip to provide context around a text or input field. Infotips are rep
 **Helper text**
 Helper text is text below a form field that helps a user provide the right information, like _Enter a unique name_. Use helper text for information that a user needs to know in order to enter the correct information. For context or background information that is “nice to have,” use an infotip.
 
-*Helper text example*
 ![Helper text](img/helper-text.png)
 
 **DO**
@@ -128,7 +140,7 @@ Helper text is text below a form field that helps a user provide the right infor
 **Placeholder text**
 Placeholder text is text inside a form field that provides an example of the required or recommended format for text input.
 
-For example, placeholder text for a date might be _e.g. DD/MM/YYYY_.
+For example, placeholder text for a date might be _e.g. YYYY-MM-DD_.
 
 Use placeholder text when the requested data type might be unfamiliar or the field requires the user to provide data in a specific format.
 
@@ -159,7 +171,6 @@ Some common use cases include:
 
 > Note: Inline error messages replace any existing helper text.
 
-*Inline error*
 ![Inline error](img/validation-example.png)
 
 **Server-side validation**
@@ -185,11 +196,6 @@ Use progressive disclosure to hide and show fields based on the users’ selecti
 **As a wizard**
 ![Wizard](img/wizard-example.png)
 
-> Note: For buttons on wizards, follow modal standards. Align buttons to the right. Place the primary button on the far right and the secondary button to the left.  
-
-**Specifications**
-When you're laying out your form elements, we recommend leaving enough vertical space to accommodate a line of caption text (about 32px) beneath form fields to account for inline errors and helper text. For more information see [Spacers](/design-guidelines/styles/spacers).
-
 ### Content
 Think of a form as a conversation between your application and your user. Apply the following principles to organize and craft content for your forms:
 
@@ -208,10 +214,41 @@ Start by writing out the conversation you might have with someone if you were gu
 
 * **Include critical secondary information as helper text.** Critical secondary information is information a user must have in order to provide the right input. For example, a user creating a name for a new asset may need to specify a unique name for that asset. Letting the user know this up front helps avoid unnecessary errors.
 
-* **Include background information/context as field-level help in a popover.**
-For example, you could use this type of help to define an unfamiliar term or concept that a novice user might not be familiar with. **Never hide critical information in a popover.**
+* **Include background information/context as field-level help in an infopop.**
+For example, you could use this type of help to define an unfamiliar term or concept that a novice user might not be familiar with. **Never hide critical information in an infopop.**
 
 * **Use natural language**
 Again, think of a form as a conversation with your user. No one wants to have a conversation with a robot.
 
 See our [content guidelines](/design-guidelines/content/) for additional guidance.
+
+## Related components and demos
+The PatternFly components listed can be used in a number of ways to build forms to suit specific needs or use-cases.
+
+**HTML/CSS components**
+* [Form](/documentation/core/components/form)
+* [Button](/documentation/core/components/button)
+* [Check](/documentation/core/components/check)
+* [Content](/documentation/core/components/content)
+* [Dropdown](/documentation/core/components/dropdown)
+* [Formcontrol](/documentation/core/components/formcontrol)
+* [Inputgroup](/documentation/core/components/inputgroup)
+* [Popover](/documentation/core/components/popover)
+* [Progress](/documentation/core/components/progress)
+* [Switch](/documentation/core/components/switch)
+* [Tooltip](/documentation/core/components/tooltip)
+
+**React components**
+* [Form](/documentation/react/components/form)
+* [Button](/documentation/react/components/button)
+* [Checkbox](documentation/react/components/checkbox)
+* [Dropdown](/documentation/react/components/dropdown)
+* [Progress](/documentation/react/components/progress)
+* [Radio](/documentation/react/components/radio)
+* [Select](/documentation/react/components/select)
+* [Switch](/documentation/react/components/switch)
+* [TextArea](/documentation/react/components/textarea)
+* [Text](/documentation/react/components/text)
+* [Popover](/documentation/react/components/popover)
+* [TextInput](/documentation/react/components/textinput)
+* [Tooltip](/documentation/react/components/tooltip)
