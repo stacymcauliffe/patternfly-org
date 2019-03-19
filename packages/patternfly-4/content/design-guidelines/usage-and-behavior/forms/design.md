@@ -34,13 +34,12 @@ Most forms will contain the following basic elements:
 
   ![Buttons on a full page](img/fullpage-button.png)
 
-  7. [Required field indicator](#indicating-required-fields)
+7. [Required field indicator](#indicating-required-fields)
 
 ## Designing forms
 ### Labeling
 Always provide labels for text and data input so users understand what information is being requested of them. Labels can be aligned to the top or left of an input.
 
-* Use left-aligned labels as your default choice. This approach has been shown to lead to the shortest completion times.
 * Use top-aligned labels when you are space constrained or if mobile usage is a high priority.
 * Whichever approach you use, we recommend that you maintain consistency throughout an application.
 
@@ -60,7 +59,7 @@ When to use:
 * Related fields must be grouped horizontally, e.g. [first name] [last name].
 
 **Left-Aligned Labels**
-The strong vertical edge helps users to scan for context, although the distance between label and input might slow users down.
+Left-aligned labels provide a strong vertical edge and help users to scan for context.
 
 Left-aligned labels are good for unfamiliar content or forms in which well-considered responses are necessary. They support left to right reading between label and field and are good for layouts with more horizontal space than vertical.
 
@@ -68,7 +67,7 @@ When to use:
 * The user is presented with unfamiliar content and would benefit from scanning the form to understand the overall context.
 * It’s more important that the user pay close attention to the form material, rather than completing it quickly.
 
-To accommodate mobile viewports, left-aligned labels should be responsive by adjusting to a top-aligned layout.
+To accommodate mobile viewports, left-aligned labels should responsively adjust to a top-aligned layout.
 
 **Labeling for checkboxes and radio buttons**
 Checkboxes and radio buttons have a different labeling convention, where the labels should be aligned to the right of the input control.
@@ -93,7 +92,7 @@ You can also present users with a single checkbox to enable or disable an option
 If you have more than 5 options to present to the user, use a select list.
 
 **Radio buttons**
-Use radio buttons to enable users to choose from a list of two or more mutually exclusive options. Users can only select one option. Selecting a different radio button will automatically de-select the previously selected option.
+Use radio buttons to enable users to choose from a list of two or more mutually exclusive options. Users can only select one option. Selecting a different radio button will automatically deselect the previously selected option.
 
 If you have more than 5 options to present to the user, use a select list.
 
@@ -103,7 +102,7 @@ Use a switch to toggle between two different states.
 **Select lists**
 Use a select list to enable users to select one option from a list of options. Select lists can be configured to enable users to select one option or multiple options depending on the use case.
 
-Learn more about data input variations in the [text and data input design guidelines](/design-guidelines/usage-and-behavior/data-input).
+Learn more about data input variations in the [data input design guidelines](/design-guidelines/usage-and-behavior/data-input).
 
 ### Provide the right kind of help
 **Infotips**
@@ -111,31 +110,30 @@ Use an infotip to provide context around a text or input field. Infotips are rep
 
 * Use a **tooltip** for brief (1 sentence or less) explanations
 * Use a **popover** for longer (2 sentences or more) explanations, content that requires formatting like numbered or bulleted lists, or content that requires you to include buttons, links, or images.
-* Popovers or tooltips should be displayed to the top of the icon.
 
-![Infotips](img/infotip.png)
+![Infotips](img/infotip-left.png)
 
-**DO**
-* Use infotips for any field that may require additional background or explanation.
-* Keep descriptions as concise as possible.
+  **DO**
+  * Use infotips for any field that may require additional background or explanation.
+  * Keep descriptions as concise as possible.
 
-**DON'T**
-* Don’t use infotips to compensate for bad design or rely on them to explain a graphic or word choice.
-* **Never** hide critical information in an infotip. Don’t put any information into an infotip that a user will always need to complete their task.
+  **DON'T**
+  * Don’t use infotips to compensate for bad design or rely on them to explain a graphic or word choice.
+  * **Never** hide critical information in an infotip. Don’t put any information into an infotip that a user will always need to complete their task.
 
 **Helper text**
 Helper text is text below a form field that helps a user provide the right information, like _Enter a unique name_. Use helper text for information that a user needs to know in order to enter the correct information. For context or background information that is “nice to have,” use an infotip.
 
 ![Helper text](img/helper-text.png)
 
-**DO**
-* Keep helper text concise while providing enough information to enable a user to complete their task.
-* Use helper text to provide critical information that is secondary to the field label.
-* Limit the use of helper text to avoid overwhelming the user.
+  **DO**
+  * Keep helper text concise while providing enough information to enable a user to complete their task.
+  * Use helper text to provide critical information that is secondary to the field label.
+  * Limit the use of helper text to avoid overwhelming the user.
 
-**DON'T**
-* Try to avoid helper text that exceeds the length of the input area.
-* **Never** use helper text as a replacement for field labels.
+  **DON'T**
+  * Try to avoid helper text that exceeds the length of the input area.
+  * **Never** use helper text as a replacement for field labels.
 
 **Placeholder text**
 Placeholder text is text inside a form field that provides an example of the required or recommended format for text input.
@@ -147,16 +145,16 @@ Use placeholder text when the requested data type might be unfamiliar or the fie
 *Placeholder text example*
 ![Placeholder text](img/placeholdertext.png)
 
-**DO**
-* Try to limit the use of placeholder text to unfamiliar input types or specific syntax requirements (like a specific date format, number format, etc).
-* Always precede placeholder text with "e.g." followed by a space. For example "e.g. (781)555-5555" or "e.g. 491"
-* Keep hints concise; never extend the length of the text field.
-* Limit the use of syntax hints to avoid overwhelming the user.
+  **DO**
+  * Try to limit the use of placeholder text to unfamiliar input types or specific syntax requirements (like a specific date format, number format, etc).
+  * Always precede placeholder text with "e.g." followed by a space. For example "e.g. (781)555-5555" or "e.g. 491"
+  * Keep hints concise; never extend the length of the text field.
+  * Limit the use of syntax hints to avoid overwhelming the user.
 
-**DON'T**
-* Don’t use placeholder text to communicate complex and lengthy requirements like password requirements. Instead, use an infotip.
-* Don’t provide placeholder text when it isn't necessary.
-* **Never** use placeholder text as a replacement for field labels.
+  **DON'T**
+  * Don’t use placeholder text to communicate complex and lengthy requirements like password requirements. Instead, use an infotip.
+  * Don’t provide placeholder text when it isn't necessary.
+  * **Never** use placeholder text as a replacement for field labels.
 
 ### Provide errors and validation
 When a form field submission results in an error, let users know as soon as possible. Always present error states on the form, and use inline errors whenever possible. The error state you can use will depend on whether validation happens on the client or the server.
