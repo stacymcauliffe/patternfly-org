@@ -20,19 +20,19 @@ Most forms will contain the following basic elements:
 
 3. [Data input](#choose-the-right-data-input) - provides a way for users to submit any information that is not free-form text.
 
-4. [Help](#provide-the-right-kind-of-help) - provides contextual assistance like infotips, placeholder text, or helpter text, in any area where the user might need additional information to provide the right input.
+4. [Help](#provide-the-right-kind-of-help) - provides contextual assistance like infotips, placeholder text, or helper text, in any area where the user might need additional information to provide the right input.
 
 5. [Errors and validation](#provide-errors-and-validation) - ensures that the correct information is collected before the form can be submitted to the system.
 
 6. Action buttons - enables a user to submit or exit a form. Button placement depends on the type of form you're presenting to the user.
 
-  When using forms in a modal, align buttons to the right edge of the input field. Place the primary button on the far right and the secondary button to the left.
+<!--When using forms in a modal, align buttons to the right edge of the input field. Place the primary button on the far right and the secondary button to the left.
 
   ![Buttons on a modal](img/modal-button.png)
 
   When using full page forms, align buttons to the left, placing the primary button on the left and secondary on the right.
 
-  ![Buttons on a full page](img/fullpage-button.png)
+  ![Buttons on a full page](img/fullpage-button.png)-->
 
 7. [Required field indicator](#indicating-required-fields)
 
@@ -49,7 +49,7 @@ Always provide labels for text and data input so users understand what informati
 * Do not use a colon after the label name.
 
 **Top-Aligned Labels**
-Top-aligned labels provide a consistent left edge and close proximity between label and input. Top-aligned labels also offer the most horizontal area for long labels.
+Use top-aligned labels by default. Top-aligned labels provide a consistent left edge and close proximity between label and input. Top-aligned labels also offer the most horizontal area for long labels.
 
 When to use:
 * The ability to complete the form quickly is a high priority.
@@ -105,21 +105,18 @@ Use a select list to enable users to select one option from a list of options. S
 Learn more about data input variations in the [data input design guidelines](/design-guidelines/usage-and-behavior/data-input).
 
 ### Provide the right kind of help
-**Infotips**
-Use an infotip to provide context around a text or input field. Infotips are represented with a question icon and can be displayed in a popover or a tooltip.
+**Popovers**
+Use a **popover** for longer (2 sentences or more) explanations, content that requires formatting like numbered or bulleted lists, or content that requires you to include buttons, links, or images.
 
-* Use a **tooltip** for brief (1 sentence or less) explanations
-* Use a **popover** for longer (2 sentences or more) explanations, content that requires formatting like numbered or bulleted lists, or content that requires you to include buttons, links, or images.
-
-![Infotips](img/infotip-left.png)
+![Popovers](img/infotip-left.png)
 
   **DO**
-  * Use infotips for any field that may require additional background or explanation.
+  * Use popovers for any field that may require additional background or explanation.
   * Keep descriptions as concise as possible.
 
   **DON'T**
-  * Don’t use infotips to compensate for bad design or rely on them to explain a graphic or word choice.
-  * **Never** hide critical information in an infotip. Don’t put any information into an infotip that a user will always need to complete their task.
+  * Don’t use popovers to compensate for bad design or rely on them to explain a graphic or word choice.
+  * **Never** hide critical information in an popover. Don’t put any information into an popover that a user will always need to complete their task.
 
 **Helper text**
 Helper text is text below a form field that helps a user provide the right information, like _Enter a unique name_. Use helper text for information that a user needs to know in order to enter the correct information. For context or background information that is “nice to have,” use an infotip.
