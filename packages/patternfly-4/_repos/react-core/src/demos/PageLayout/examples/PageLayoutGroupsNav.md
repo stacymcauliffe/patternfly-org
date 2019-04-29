@@ -4,6 +4,6 @@ section: 'demos'
 fullscreen: true
 ---
 
-import PageLayoutGroupsNav from './PageLayoutGroupsNav';
+import ExamplePage from './PageLayoutGroupsNav';
 
-<PageLayoutGroupsNav />
+<ExamplePage />
