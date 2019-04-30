@@ -11,7 +11,7 @@ Progress bars are composed of four elements:
 
 1. **Title**: concisely conveys the task the user or system is working to complete
 2. **Track**: a visual guide to describe to the user what it takes to meet full task completion
-3. **Value of progress**: a value that helps the user understand how much progress has been made 
+3. **Value of progress**: a value that helps the user understand how much progress has been made
 4. **Indicator**: an animated indicator along the track that draws the user's eye to the progress bar and demonstrates the user’s progress towards completion
 
 ## Usage
@@ -20,7 +20,7 @@ Use a progress bar to visually indicate an extended operation that needs to be c
 Without a progress bar marking their progress towards completion a user could become lost about how much effort or time it will take to complete a given process. Progress bars solve the problem of helping users understand how much of a process has been completed.
 
 ### When to use
-![progress-bar](img/progress_bar_blue_animated.gif)
+<!--![progress-bar](img/progress_bar_blue_animated.gif)-->
 
 **Determinate progress bar**
 
