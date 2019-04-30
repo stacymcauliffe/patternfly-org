@@ -40,14 +40,14 @@ The React seed is an open source build scaffolding utility created to give devel
 Follow the steps outlined in the [React seed README](https://github.com/patternfly/patternfly-react-seed#quick-start) to install.
 
 ### Installing and configuring PatternFly React
-Using npm, run the following commands to install:
+Using npm, run the following command to install:
 ```
 npm install @patternfly/react-core --save
 ```
 
 **OR**
 
-Using yarn, run the following commands to install:
+Using yarn, run the following command to install:
 ```
 yarn add @patternfly/react-core
 ```
